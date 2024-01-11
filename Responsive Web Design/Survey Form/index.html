@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Thank you for taking the time to complete this survey</p>
+
+  <form id="survey-form">
+    <fieldset class="basicInfo">
+      <label for="name" id="name-label"> Name:<input id="name" name="name" type="text" placeholder="Enter your name"
+          required /></label>
+      <label for="email" id="email-label"> Email:<input id="email" name="email" type="email"
+          placeholder="Enter your email" required /></label>
+      <label for="number" id="number-label"> Age:<input id="number" name="number" type="number" min="13" max="99"
+          placeholder="Age" required /></label>
+    </fieldset>
+
+    <fieldset class="prefLang">
+      <label for="dropdown" id="dropdown-label">What is your preferred language?<select name="dropdown" id="dropdown">
+          <option value="select"> (select one) </option>
+          <option value="c++"> C++</option>
+          <option value="java"> Java</option>
+          <option value="python"> Python</option>
+          <option value="c"> C</option>
+          <option value="html/css"> HTML / CSS</option>
+        </select>
+      </label>
+    </fieldset>
+    
+    <fieldset class="interest">
+      <legend>What are you interested in?</legend>
+      <div>
+        <input type="radio" id="front" name="interest" value="front" /><label for="front">Front-End</label>
+      </div>
+      <div>
+        <input type="radio" id="back" name="interest" value="back" /><label for="back">Back-End</label>
+      </div>
+      <div>
+        <input type="radio" id="full" name="interest" value="full" /><label for="full">Full-Stack</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="familiar">
+      <legend>What are you familiar with? (Select all that apply)</legend>
+      <div>
+        <input type="checkbox" id="vscode" name="familiar" value="vscode" /><label for="vscode">VS Code</label>
+      </div>
+      <div>
+        <input type="checkbox" id="intellij" name="familiar" value="intellij" /><label for="intellij IDEA">Intellij
+          IDEA</label>
+      </div>
+      <div>
+        <input type="checkbox" id="git" name="familiar" value="git" /><label for="git">Git</label>
+      </div>
+      <div>
+        <input type="checkbox" id="Github" name="familiar" value="github" /><label for="github">Github</label>
+      </div>
+      <div>
+        <input type="checkbox" id="none" name="familiar" value="none" /><label for="none">None of the above</label>
+      </div>
+      <div>
+        <input type="checkbox" id="other" name="familiar" value="other" /><label for="other">Other (specify
+          below)</label>
+        <textarea id="other" name="familiar" rows="4" cols="50"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Provide additional information below :</legend>
+      <div>
+        <textarea id="info" name="info" rows="4" cols="50" placeholder="Additional information..."></textarea>
+        <input type="submit" id="submit" value="Submit">
+      </div>
+    </fieldset>
+  </form>
+</body>
+<footer>
+  <p>Created by Kaylee Pierce</p>
+</footer>
+
+</html>
